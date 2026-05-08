@@ -113,7 +113,15 @@
 
     <script>
         function copyInstall() {
+            // Fire Google Analytics Event
+        gtag('event', 'copy_install_command', {
+            'event_category': 'engagement',
+            'event_label': 'copy_install_command'
+        });
+
+
             navigator.clipboard.writeText('npm install -g project-nudge && nudge start');
+
             alert('Command copied to clipboard!');
         }
     </script>
